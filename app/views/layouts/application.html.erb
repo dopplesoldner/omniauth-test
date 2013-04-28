@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>OmniauthTutorial</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <title>Omniauth tutorial</title>
+  <%= stylesheet_link_tag "application", media: "all", 
+                                         "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div  class="container">
+  <div class="row">
+    <div class="span9"><%= yield %></div>
+    <div class="span3">
+      <h2>About</h2>
+	      <p>Authentication with omniauth. Facebook, Twitter and Google</p>        
+    </div>
+  </div>
+</div>
 </body>
 </html>
