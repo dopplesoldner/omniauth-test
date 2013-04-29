@@ -1,0 +1,10 @@
+<h1>User info </h1>
+<%= @user.name%>
+<%= @user.email%>
+
+<%if @user.authorizations.any?%>
+	<h3>Authorizations (<%=@user.authorizations.count%>)</h3>
+	<ol class="authorizations">
+		<%=render @authorizations%>
+	</ol>
+<%end%>

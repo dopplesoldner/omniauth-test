@@ -1,5 +1,8 @@
 OmniauthTutorial::Application.routes.draw do
   
+  resources :users
+  resources :authorizations
+  
   match '/login', to: 'sessions#new', via: 'get'
   match '/logout', to: 'sessions#destroy', via: 'get'
   
